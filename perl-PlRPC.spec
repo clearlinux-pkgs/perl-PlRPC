@@ -4,12 +4,13 @@
 #
 Name     : perl-PlRPC
 Version  : 0.2020
-Release  : 1
+Release  : 2
 URL      : https://cpan.metacpan.org/authors/id/M/MN/MNOONING/PlRPC/PlRPC-0.2020.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/M/MN/MNOONING/PlRPC/PlRPC-0.2020.tar.gz
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : Artistic-1.0 GPL-1.0
+Requires: perl-PlRPC-perl = %{version}-%{release}
 Requires: perl(Net::Daemon)
 Requires: perl(Storable)
 BuildRequires : buildreq-cpan
@@ -33,8 +34,18 @@ Requires: perl-PlRPC = %{version}-%{release}
 dev components for the perl-PlRPC package.
 
 
+%package perl
+Summary: perl components for the perl-PlRPC package.
+Group: Default
+Requires: perl-PlRPC = %{version}-%{release}
+
+%description perl
+perl components for the perl-PlRPC package.
+
+
 %prep
 %setup -q -n PlRPC
+cd %{_builddir}/PlRPC
 
 %build
 export http_proxy=http://127.0.0.1:9/
@@ -70,15 +81,18 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files
 %defattr(-,root,root,-)
-/usr/lib/perl5/vendor_perl/5.28.2/Bundle/PlRPC.pm
-/usr/lib/perl5/vendor_perl/5.28.2/RPC/PlClient.pm
-/usr/lib/perl5/vendor_perl/5.28.2/RPC/PlClient/Comm.pm
-/usr/lib/perl5/vendor_perl/5.28.2/RPC/PlServer.pm
-/usr/lib/perl5/vendor_perl/5.28.2/RPC/PlServer/Comm.pm
-/usr/lib/perl5/vendor_perl/5.28.2/RPC/PlServer/Test.pm
 
 %files dev
 %defattr(-,root,root,-)
 /usr/share/man/man3/Bundle::PlRPC.3
 /usr/share/man/man3/RPC::PlClient.3
 /usr/share/man/man3/RPC::PlServer.3
+
+%files perl
+%defattr(-,root,root,-)
+/usr/lib/perl5/vendor_perl/5.30.1/Bundle/PlRPC.pm
+/usr/lib/perl5/vendor_perl/5.30.1/RPC/PlClient.pm
+/usr/lib/perl5/vendor_perl/5.30.1/RPC/PlClient/Comm.pm
+/usr/lib/perl5/vendor_perl/5.30.1/RPC/PlServer.pm
+/usr/lib/perl5/vendor_perl/5.30.1/RPC/PlServer/Comm.pm
+/usr/lib/perl5/vendor_perl/5.30.1/RPC/PlServer/Test.pm
