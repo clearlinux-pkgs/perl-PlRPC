@@ -4,7 +4,7 @@
 #
 Name     : perl-PlRPC
 Version  : 0.2020
-Release  : 2
+Release  : 3
 URL      : https://cpan.metacpan.org/authors/id/M/MN/MNOONING/PlRPC/PlRPC-0.2020.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/M/MN/MNOONING/PlRPC/PlRPC-0.2020.tar.gz
 Summary  : No detailed summary available
@@ -90,9 +90,9 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files perl
 %defattr(-,root,root,-)
-/usr/lib/perl5/vendor_perl/5.30.1/Bundle/PlRPC.pm
-/usr/lib/perl5/vendor_perl/5.30.1/RPC/PlClient.pm
-/usr/lib/perl5/vendor_perl/5.30.1/RPC/PlClient/Comm.pm
-/usr/lib/perl5/vendor_perl/5.30.1/RPC/PlServer.pm
-/usr/lib/perl5/vendor_perl/5.30.1/RPC/PlServer/Comm.pm
-/usr/lib/perl5/vendor_perl/5.30.1/RPC/PlServer/Test.pm
+/usr/lib/perl5/vendor_perl/5.30.2/Bundle/PlRPC.pm
+/usr/lib/perl5/vendor_perl/5.30.2/RPC/PlClient.pm
+/usr/lib/perl5/vendor_perl/5.30.2/RPC/PlClient/Comm.pm
+/usr/lib/perl5/vendor_perl/5.30.2/RPC/PlServer.pm
+/usr/lib/perl5/vendor_perl/5.30.2/RPC/PlServer/Comm.pm
+/usr/lib/perl5/vendor_perl/5.30.2/RPC/PlServer/Test.pm
