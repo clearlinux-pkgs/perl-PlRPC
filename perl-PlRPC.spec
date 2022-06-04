@@ -4,7 +4,7 @@
 #
 Name     : perl-PlRPC
 Version  : 0.2020
-Release  : 13
+Release  : 14
 URL      : https://cpan.metacpan.org/authors/id/M/MN/MNOONING/PlRPC/PlRPC-0.2020.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/M/MN/MNOONING/PlRPC/PlRPC-0.2020.tar.gz
 Summary  : No detailed summary available
@@ -90,9 +90,4 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files perl
 %defattr(-,root,root,-)
-/usr/lib/perl5/vendor_perl/5.34.0/Bundle/PlRPC.pm
-/usr/lib/perl5/vendor_perl/5.34.0/RPC/PlClient.pm
-/usr/lib/perl5/vendor_perl/5.34.0/RPC/PlClient/Comm.pm
-/usr/lib/perl5/vendor_perl/5.34.0/RPC/PlServer.pm
-/usr/lib/perl5/vendor_perl/5.34.0/RPC/PlServer/Comm.pm
-/usr/lib/perl5/vendor_perl/5.34.0/RPC/PlServer/Test.pm
+/usr/lib/perl5/*
